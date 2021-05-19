@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios, segunda versión remota" />
+        <title>EVALUACIÓN Nº2 &#127909;</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <p><a href="index.html">Portada</a> <a href="peliculas.html">Películas</a> <a href="locaciones.html" class="active">Locaciones</a> <a href="ganancias.html">Ganancias</a></p>
+            </nav>
+            <main>
+                <div id="mapa">
+                    
+                </div>
+            </main>
+            <footer>
+                <p><a href="https://github.com/ValentinaRey">Valentina Rey</a> <a href="https://github.com/profesorfaco/dno037-2021">DNO037</a></p>
+            </footer>
+        </div>
+<script>
+    var mymap = L.map('mapa').setView([33.5427796,9.9672612], 2);
+    var pelicula1 = L.icon ({
+                                iconUrl: 'images/auto-1.png',
+
+                                iconSize:     [45, 45], // size of the icon
+                                
+                            });
+     var pelicula2 = L.icon ({
+                                iconUrl: 'images/auto-2.png',
+
+                                iconSize:     [45, 45], // size of the icon
+                                
+                            });
+      var pelicula3 = L.icon ({
+                                iconUrl: 'images/auto-3.png',
+
+                                iconSize:     [15, 45], // size of the icon
+                                
+                            });
+       var pelicula4 = L.icon ({
+                                iconUrl: 'images/auto-4.png',
+
+                                iconSize:     [45, 45], // size of the icon
+                                
+                            });
+        var pelicula5 = L.icon ({
+                                iconUrl: 'images/auto-5.png',
+
+                                iconSize:     [45, 45], // size of the icon
+                                
+                            });
+         var pelicula6= L.icon ({
+                                iconUrl: 'images/auto-6.png',
+
+                                iconSize:     [45, 45], // size of the icon
+                                
+                            });
+          var pelicula7= L.icon ({
+                                iconUrl: 'images/auto-7.png',
+
+                                iconSize:     [45, 45], // size of the icon
+                                
+                            });
+           var pelicula8 = L.icon ({
+                                iconUrl: 'images/auto-8.png',
+
+                                iconSize:     [45, 45], // size of the icon
+                                
+                            });
+            var pelicula9 = L.icon ({
+                                iconUrl: 'images/auto-9.png',
+
+                                iconSize:     [5, 45], // size of the icon
+                                
+                            });
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        id: 'mapbox/dark-v10',
+        tileSize: 512,
+        zoomOffset: -1
+    }).addTo(mymap);
+    L.marker([34.0207305,-118.6919199], { icon: pelicula1}).addTo(mymap).bindPopup("<b>Rápido y furioso 1: Los Angéles.</b>");
+    L.marker([25.7825453,-80.2994987], { icon: pelicula2}).addTo(mymap).bindPopup("<b>Rápido y furioso 2: Miami.</b>");
+    L.marker([35.5062907,138.6486406], { icon: pelicula3}).addTo(mymap).bindPopup("<b>Rápido y furioso 3: Tokyo.</b>");
+    L.marker([18.6691756,-71.2513507], { icon: pelicula4}).addTo(mymap).bindPopup("<b>Rápido y furioso 4: Centro América, uno de esos lugares fue República Dominicana.</b>");
+    L.marker([-22.9132525,-43.7261706], { icon: pelicula5}).addTo(mymap).bindPopup("<b>Rápido y furioso 5: Rio de Janeiro.</b>");
+    L.marker([52.7602208,-6.8131503], { icon: pelicula6}).addTo(mymap).bindPopup("<b>Rápido y furioso 6: Europa, uno de esos lugares fue Inglaterra.</b>");
+    L.marker([24.3870789, 54.418535], { icon: pelicula7}).addTo(mymap).bindPopup("<b>Rápido y furioso 7: Abu Dahbi.</b>");
+    L.marker([65.6033138, -17.075035],{ icon: pelicula8}).addTo(mymap).bindPopup("<b> Rápido y furioso 8: Entre EEUU, cuba y algunas escenas fueron grabas en el Lago Mývatn.</b>");
+    L.marker([55.9412846,-3.2753782], { icon: pelicula9}).addTo(mymap).bindPopup("<b>Rápido y furioso 9: Entre EEUU y Europa, uno de esos lugares fue Edimburgo. <b>");
+
+</script>
+    </body>
+</html>
